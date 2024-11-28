@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.jetbrainsKotlinSerialization)
     alias(libs.plugins.ksp)
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
@@ -57,26 +58,19 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-
-
     // Room
     implementation(libs.bundles.room)
     annotationProcessor(libs.androidx.room.compiler)
     ksp(libs.androidx.room.compiler)
     implementation(libs.ksp.gradlePlugin)
-
     // Coil
     implementation(libs.coil.compose)
-
     // Ktor
     implementation(libs.bundles.ktor)
-
     // Koin
     implementation(libs.bundles.koin)
-
     // Extended Icons
     implementation(libs.androidx.material.icons.extended)
-
     // Navigation
     implementation(libs.androidx.navigation.compose)
     implementation(libs.kotlinx.serialization.json)
